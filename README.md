@@ -1,7 +1,7 @@
 # Site-Ohmyfood
 Projet 4 de la formation OpenClassrooms "Intégrateur Web"
 
-Mission : Développer le site de la startup Ohmyfood qui répertorie les menus de restaurants gastronomiques en “mobile first”.
+Mission : Développer en “mobile first” le site de la startup Ohmyfood qui répertorie les menus de restaurants gastronomiques.
 - [x] Intégrer une maquette Figma en mobile-first
 - [x] Mettre en œuvre des animations CSS
 - [x] Utiliser SASS pour structurer le code CSS (système de variables, mixins, nesting)
