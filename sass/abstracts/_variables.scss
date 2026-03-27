@@ -1,12 +1,45 @@
-// Couleurs
-$color-primary:   #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary:  #99E2D0;
+// Couleurs de la charte graphique
+$color-primary:         #9356DC;
+$color-secondary:       #FF79DA;
+$color-tertiary:        #99E2D0;
 
-// Polices
-$font-title: 'Shrikhand', cursive;   // Logo et titres
-$font-text:  'Roboto', sans-serif;   // Texte courant
+// Couleurs de fond
+$color-bg-light:        #F6F6F6;  // fond général de la page et cartes fonctionnement
+$color-bg-white:        #FFFFFF;  // fond des cartes restaurant et section fonctionnement
+$color-bg-location:     #EAEAEA;  // fond de la barre de localisation
+$color-bg-footer:       #353535;  // fond du footer
+
+// Couleurs de texte
+$color-text-dark:       #353535;  // texte courant et icône localisation
+$color-text-grey:       #7E7E7E;  // icônes section fonctionnement
+$color-text-white:      #FFFFFF;  // textes sur fond sombre
+$color-badge-text:      #008766;  // texte du badge "Nouveau"
+
+// Typographie
+$font-title:  'Shrikhand', cursive;   // logo et titres
+$font-text:   'Roboto', sans-serif;   // texte courant
 
 // Breakpoints
-$breakpoint-tablet:  768px;
-$breakpoint-desktop: 1024px;
+$breakpoint-tablet:   768px;
+$breakpoint-desktop:  1024px;
+
+// Espacements
+$spacing-4:   4px;
+$spacing-8:   8px;
+$spacing-16:  16px;
+$spacing-24:  24px;
+$spacing-32:  32px;
+$spacing-48:  48px;
+
+// Formes
+$border-radius-card:    15px;   // cartes restaurant
+$border-radius-step:    20px;   // cartes section fonctionnement
+$border-radius-btn:     30px;   // boutons
+$border-radius-number:  50%;    // numéros section fonctionnement
+
+// Ombres
+$shadow-card:      0 4px 15px 0 rgba(0, 0, 0, 0.10);  // cartes restaurant
+$shadow-step:      0 4px 15px 0 rgba(0, 0, 0, 0.15);  // cartes fonctionnement
+$shadow-btn:       0 4px 10px 0 rgba(0, 0, 0, 0.25);  // boutons
+$shadow-logo:      0 2px  4px 0 rgba(0, 0, 0, 0.15);  // barre logo
+$shadow-location:  0 4px  4px 0 rgba(0, 0, 0, 0.25);  // barre localisation
