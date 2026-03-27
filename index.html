@@ -30,6 +30,16 @@
   </head>
 
   <body>
+    <!-- Définition des dégradés SVG réutilisables -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="heart-gradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FF79DA" />
+          <stop offset="100%" stop-color="#9356DC" />
+        </linearGradient>
+      </defs>
+    </svg>
+
     <!-- HEADER -->
     <header class="header">
       <div class="header__top">
@@ -110,12 +120,20 @@
                 <p class="card__name">La palette du goût</p>
                 <p class="card__cuisine">Ménilmontant</p>
               </div>
-              <button
-                class="card__heart"
-                aria-label="Ajouter La palette du goût aux favoris"
-              >
-                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-              </button>
+              <!-- Le validateur n'accepte pas dans span l'instruction : aria-label="Ajouter La palette du goût aux favoris" -->
+              <span class="card__heart">
+                <span class="card__heart-icon">
+                  <svg
+                    viewBox="0 0 22 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </a>
 
@@ -134,12 +152,20 @@
                 <p class="card__name">La note enchantée</p>
                 <p class="card__cuisine">Charonne</p>
               </div>
-              <button
-                class="card__heart"
-                aria-label="Ajouter La note enchantée aux favoris"
-              >
-                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-              </button>
+              <!-- aria-label="Ajouter La note enchantée aux favoris" -->
+              <span class="card__heart">
+                <span class="card__heart-icon">
+                  <svg
+                    viewBox="0 0 22 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </a>
 
@@ -157,12 +183,20 @@
                 <p class="card__name">À la française</p>
                 <p class="card__cuisine">Cité Rouge</p>
               </div>
-              <button
-                class="card__heart"
-                aria-label="Ajouter À la française aux favoris"
-              >
-                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-              </button>
+              <!-- aria-label="Ajouter À la française aux favoris" -->
+              <span class="card__heart">
+                <span class="card__heart-icon">
+                  <svg
+                    viewBox="0 0 22 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </a>
 
@@ -180,12 +214,20 @@
                 <p class="card__name">Le délice des sens</p>
                 <p class="card__cuisine">Folie-Méricourt</p>
               </div>
-              <button
-                class="card__heart"
-                aria-label="Ajouter Le délice des sens aux favoris"
-              >
-                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-              </button>
+              <!-- aria-label="Ajouter Le délice des sens aux favoris" -->
+              <span class="card__heart">
+                <span class="card__heart-icon">
+                  <svg
+                    viewBox="0 0 22 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </a>
         </div>

@@ -237,14 +237,27 @@ button {
 }
 .card__heart {
   cursor: pointer;
-  font-size: 18px;
-  color: #000000;
   flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
 }
-.card__heart i {
+.card__heart-icon {
+  display: block;
   width: 22px;
   height: 21px;
-  display: block;
+}
+.card__heart-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.card__heart-icon path {
+  stroke: #101010;
+  stroke-width: 1;
+}
+.card__heart:hover .card__heart-icon path {
+  fill: url(#heart-gradient);
+  stroke: none;
 }
 
 .footer {
