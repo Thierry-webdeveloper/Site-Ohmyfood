@@ -43,3 +43,10 @@ $shadow-step:      0 4px 15px 0 rgba(0, 0, 0, 0.15);  // cartes fonctionnement
 $shadow-btn:       0 4px 10px 0 rgba(0, 0, 0, 0.25);  // boutons
 $shadow-logo:      0 2px  4px 0 rgba(0, 0, 0, 0.15);  // barre logo
 $shadow-location:  0 4px  4px 0 rgba(0, 0, 0, 0.25);  // barre localisation
+
+// Survol bouton
+$color-primary-light:   #c084e8;  // #9356DC éclairci pour le hover
+$shadow-btn-hover:      0 4px 15px 0 rgba(0, 0, 0, 0.35);   // ombre renforcée au survol
+
+// Durée des transitions au survol
+$transition-hover-dur: 1300ms;  // les deux transitions doivent avoir la même durée (card__heart-icon et card__heart-icon--filled

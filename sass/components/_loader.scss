@@ -1,0 +1,150 @@
+// LOADER
+
+@use '../abstracts/variables' as *;
+
+// ------------------------------------------------------------
+// Variables du loader
+// Toutes les constantes sont regroupées ici pour faciliter
+// la maintenance : modifier une valeur suffit.
+// ------------------------------------------------------------
+
+// Durées d'apparition initiale
+$loader-logo-dur:        700ms;
+$loader-bars-dur:        500ms;
+$loader-tagline-dur:     500ms;
+
+// Délais d'apparition initiale
+$loader-logo-delay:      80ms;
+$loader-bars-delay:      300ms;
+$loader-tagline-delay:   450ms;
+
+// Durée totale du loader avant disparition
+$loader-total-dur:       2500ms;
+// Durée de la transition de disparition
+$loader-hide-dur:        400ms;
+
+// Barres — pulse
+$loader-bar-pulse-dur:   850ms;
+$loader-bar-gap:         16px;
+$loader-bar-width:       13px;
+$loader-bar-radius:      6px;
+// Couleurs et hauteurs des barres (charte Ohmyfood)
+$loader-bar-colors:      #9356DC, #c44eb7, #FF79DA, #c4b4d7, #99E2D0, #c4b4d7, #9356DC;
+$loader-bar-heights:     40px, 52px, 34px, 58px, 42px, 48px, 36px;
+
+// Tagline — clignotement
+$loader-blink-dur:       2000ms;
+$loader-blink-delay:     1200ms;
+$loader-blink-opacity:   0.15;
+
+// ------------------------------------------------------------
+// Keyframes
+// ------------------------------------------------------------
+
+@keyframes loader-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loader-bar-pulse {
+  from {
+    transform: scaleY(0.35);
+    opacity: 0.45;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loader-tagline-blink {
+  0%   { opacity: 1; }
+  50%  { opacity: $loader-blink-opacity; }
+  100% { opacity: 1; }
+}
+
+@keyframes loader-hide {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+// ------------------------------------------------------------
+// Bloc loader
+// ------------------------------------------------------------
+
+.loader {
+  position: fixed;
+  inset: 0; // top: 0; right: 0; bottom: 0; left: 0
+  z-index: 100;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-32;
+
+  // Disparition automatique après $loader-total-dur
+  animation: loader-hide $loader-hide-dur ease-in $loader-total-dur forwards;
+
+  // ----------------------------------------------------------
+  // Logo SVG
+  // ----------------------------------------------------------
+
+  &__logo {
+    overflow: visible; // évite toute coupure des extrémités du texte
+    animation: loader-slide-in $loader-logo-dur cubic-bezier(0.22, 1, 0.36, 1) $loader-logo-delay both;
+  }
+
+  // ----------------------------------------------------------
+  // Barres animées
+  // ----------------------------------------------------------
+
+  &__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: $loader-bar-gap;
+    animation: loader-slide-in $loader-bars-dur cubic-bezier(0.22, 1, 0.36, 1) $loader-bars-delay both;
+  }
+
+  &__bar {
+    width: $loader-bar-width;
+    border-radius: $loader-bar-radius;
+    animation: loader-bar-pulse $loader-bar-pulse-dur ease-in-out infinite alternate both;
+
+    // Boucle @for : génère couleur, hauteur et délai pour chaque barre
+    @for $i from 1 through 7 {
+      &--#{$i} {
+        background-color: nth($loader-bar-colors, $i);
+        height: nth($loader-bar-heights, $i);
+        animation-delay: ($i - 1) * 150ms;
+      }
+    }
+  }
+
+  // ----------------------------------------------------------
+  // Tagline
+  // ----------------------------------------------------------
+
+  &__tagline {
+    font-family: $font-text; //'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #aaaaaa;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0;
+
+    animation:
+      loader-slide-in $loader-tagline-dur cubic-bezier(0.22, 1, 0.36, 1) $loader-tagline-delay both,
+      loader-tagline-blink $loader-blink-dur ease-in-out infinite $loader-blink-delay;
+  }
+}

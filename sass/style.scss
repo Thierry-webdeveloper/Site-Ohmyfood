@@ -1,5 +1,6 @@
 @use 'abstracts/variables' as *;
 @use 'base/reset';
+@use 'components/loader';
 @use 'pages/restaurant';
 
 // HEADER
@@ -92,6 +93,31 @@
   border-radius: $border-radius-btn;
   box-shadow: $shadow-btn;
   margin-top: 27px;
+
+    // Animation survol
+  position: relative;
+  overflow: hidden;
+  z-index: 1;   // crée un contexte d'empilement pour le bouton
+  transition: box-shadow 300ms ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, $color-primary-light, $color-secondary);
+    opacity: 0;
+    z-index: -1;  // place le dégradé de survol derrière le texte
+    transition: opacity 300ms ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    box-shadow: $shadow-btn-hover;
+  }
+
 }
 
 // FONCTIONNEMENT
@@ -234,32 +260,49 @@
     color: #000000;
   }
 
-  &__heart {
+&__heart {
     cursor: pointer;
-    flex-shrink: 0;   // L’élément ne peut PAS rétrécir
-    background: none;
-    border: none;
-    padding: 0;
+    position: relative;
+    width: 22px;          // largeur Figma
+    height: 21px;         // hauteur Figma
+    display: block;
 
+    // L'icône de contour (SVG 1)
     &-icon {
-      display: block; // corrige le comportement inline du span
-      width: 22px;    // Largeur Figma
-      height: 21px;   // Hauteur Figma
+      display: block;       // corrige le comportement inline du span
+      width: 100%;
+      height: 100%;
+      opacity: 1;           // visible par défaut
+      transition: opacity $transition-hover-dur ease;
 
-      svg {
-        width: 100%;
-        height: 100%;
-      }
+      svg { width: 100%; height: 100%; }
+      path { stroke: #101010; stroke-width: 1; fill: none; }
+    }
 
-      path {
-        stroke: #101010;
-        stroke-width: 1;
+    // L'icône pleine (SVG 2)
+    &-icon--filled {
+      position: absolute; // sort du flux
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;         // non visible par défaut
+      transition: opacity $transition-hover-dur ease;
+
+      path { 
+        fill: url(#heart-gradient);
+        stroke: none; 
       }
     }
 
-    &:hover &-icon path {
-      fill: url(#heart-gradient);
-      stroke: none;
+    // L'animation au survol du PARENT
+    &:hover {
+      .card__heart-icon {
+        opacity: 0;       // Le contour disparaît
+      }
+      .card__heart-icon--filled {
+        opacity: 1;       // Le plein apparaît
+      }
     }
   }
 }
