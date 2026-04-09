@@ -148,6 +148,11 @@ button {
   left: 17px;
 }
 
+@media (min-width: 1440px) {
+  main {
+    background-color: #FFFFFF;
+  }
+}
 .restaurant-banner {
   width: 100%;
 }
@@ -156,15 +161,25 @@ button {
   height: 275px;
   object-fit: cover;
 }
+@media (min-width: 1440px) {
+  .restaurant-banner__image {
+    height: 383px;
+  }
+}
 
 .restaurant-content {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
-  margin-bottom: 40px;
   position: relative;
   z-index: 1;
-  min-height: 200px;
+}
+@media (min-width: 1440px) {
+  .restaurant-content {
+    max-width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .restaurant-content__inner {
@@ -172,6 +187,11 @@ button {
   flex-direction: column;
   padding-top: 32px;
   align-items: center;
+}
+@media (min-width: 1440px) {
+  .restaurant-content__inner {
+    padding-top: 51px;
+  }
 }
 
 .restaurant-title {
@@ -185,6 +205,13 @@ button {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
+}
+@media (min-width: 1440px) {
+  .restaurant-title {
+    max-width: 307px;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
 .menu-section {
@@ -208,6 +235,12 @@ button {
   height: 3px;
   background-color: #99E2D0;
   margin-top: 5px;
+}
+@media (min-width: 1440px) {
+  .menu-section {
+    max-width: 634px;
+    padding: 0;
+  }
 }
 
 .dish {
@@ -279,7 +312,7 @@ button {
 }
 
 .btn--restaurant {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .header {
@@ -348,6 +381,7 @@ button {
   font-size: 18px;
   color: #353535;
   margin-top: 8px;
+  margin-bottom: 27px;
 }
 @media (min-width: 1440px) {
   .hero {
@@ -358,6 +392,7 @@ button {
   }
   .hero__subtitle {
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -374,7 +409,6 @@ button {
   height: 50px;
   border-radius: 30px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  margin-top: 27px;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -394,11 +428,6 @@ button {
 }
 .btn:hover {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
-}
-@media (min-width: 1440px) {
-  .btn {
-    margin-top: 0;
-  }
 }
 
 .how-it-works {
@@ -471,7 +500,7 @@ button {
 }
 
 .restaurants {
-  background-color: #FFFFFF;
+  background-color: #F6F6F6;
   padding: 54px 20px;
 }
 .restaurants__title {
@@ -490,7 +519,6 @@ button {
     padding: 0 180px;
     margin-top: 30px;
     margin-bottom: 30px;
-    background-color: #F6F6F6;
   }
   .restaurants__grid {
     display: grid;
