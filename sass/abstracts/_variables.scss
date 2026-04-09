@@ -50,3 +50,6 @@ $shadow-btn-hover:      0 4px 15px 0 rgba(0, 0, 0, 0.35);   // ombre renforcée 
 
 // Durée des transitions au survol
 $transition-hover-dur: 1300ms;  // les deux transitions doivent avoir la même durée (card__heart-icon et card__heart-icon--filled
+$transition-select-dur: 500ms;  // coulissement du sélecteur de plat (restaurant.scss)
+$animation-dish-dur: 1500ms;    // durée d'arrivée des plats (restaurant.scss)
+$animation-dish-delay: 150ms;   // délai entre chaque plat (restaurant.scss)

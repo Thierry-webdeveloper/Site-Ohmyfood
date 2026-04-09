@@ -1,5 +1,17 @@
 @use '../abstracts/variables' as *;
 
+// LOADER MENUS
+@keyframes dish-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // HEADER
 .header__goback {
   padding: 7px 6px;
@@ -118,6 +130,15 @@
   box-shadow: $shadow-card;
   margin-top: 12px;
   overflow: hidden;
+  opacity: 0;                                     // état initial avant l'animation
+  //animation: dish-appear 1500ms ease forwards;    // fige l'animation sur son état final
+  animation: dish-appear $animation-dish-dur cubic-bezier(.57,0,0,1) forwards;
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * $animation-dish-delay}ms;
+    }
+  }
 
   &__text {
     display: flex;
@@ -166,6 +187,7 @@
     border-radius: 0 $border-radius-card $border-radius-card 0;
     overflow: hidden;
     flex-shrink: 0;
+    transition: max-width $transition-select-dur ease-in-out;
 
     i {
       display: flex;
@@ -182,7 +204,7 @@
 
   &:hover &__select {
     max-width: 59px;
-  } 
+  }
 }
 
 // BOUTON
