@@ -115,27 +115,11 @@
   border-radius: $border-radius-btn;
   box-shadow: $shadow-btn;
 
-    // Animation survol
-  position: relative;
-  overflow: hidden;
-  z-index: 1;   // crée un contexte d'empilement pour le bouton
-  transition: box-shadow 300ms ease;
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, $color-primary-light, $color-secondary);
-    opacity: 0;
-    z-index: -1;  // place le dégradé de survol derrière le texte
-    transition: opacity 300ms ease;
-  }
-
-  &:hover::after {
-    opacity: 1;
-  }
+  // Animation survol
+  transition: opacity 500ms ease, box-shadow 500ms ease;
 
   &:hover {
+    opacity: 0.75;
     box-shadow: $shadow-btn-hover;
   }
 }

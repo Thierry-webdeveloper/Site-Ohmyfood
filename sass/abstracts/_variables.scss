@@ -53,3 +53,6 @@ $transition-hover-dur: 1300ms;  // les deux transitions doivent avoir la même d
 $transition-select-dur: 500ms;  // coulissement du sélecteur de plat (restaurant.scss)
 $animation-dish-dur: 1500ms;    // durée d'arrivée des plats (restaurant.scss)
 $animation-dish-delay: 150ms;   // délai entre chaque plat (restaurant.scss)
+
+// Variable "boucle" pour l'animation des plats
+$animation-dish-count: 13;      // nombre max d'éléments animés (La note enchantée a 4 entrées)
