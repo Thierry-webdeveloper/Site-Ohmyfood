@@ -1,6 +1,6 @@
 # Site-Ohmyfood
 Projet 4 de la formation OpenClassrooms "Intégrateur Web"
-                                                                  [Version en ligne]([https://thierry-webdeveloper.github.io/Site-Ohmyfood/index.html "Cliquer ici pour visiter")
+[Version en ligne](https://thierry-webdeveloper.github.io/Site-Ohmyfood/index.html "Cliquer ici pour visiter")
 
 Mission : Développer en “mobile first” le site de la startup Ohmyfood qui répertorie les menus de restaurants gastronomiques.
 - [x] Intégrer une maquette Figma en mobile-first
