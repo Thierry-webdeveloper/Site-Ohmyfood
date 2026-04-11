@@ -1,16 +1,17 @@
 @use '../abstracts/variables' as *;
 
-// LOADER MENUS
-@keyframes dish-appear {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+// ANIMATIONS (@keyframes)
+  // Apparition des menus et des plats
+  @keyframes dish-appear {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 // HEADER
 .header__goback {
@@ -190,12 +191,19 @@
       border-radius: 50%;
       color: $color-tertiary; // coche verte sur fond blanc
       font-size: 14px;
+      transition: transform $transition-select-dur ease-in-out;   // prépare l'animation de l'icône
     }
   }
 
+  // La coche à droite du plat apparaît au survol
   &:hover &__select {
     max-width: 59px;
   }
+
+  // Animation de l'icône dans la coche à droite du plat au survol
+  &:hover &__select i {
+    transform: rotate(360deg);
+  }  
 }
 
 // Animation des plats

@@ -317,9 +317,13 @@ button {
   border-radius: 50%;
   color: #99E2D0;
   font-size: 14px;
+  transition: transform 500ms ease-in-out;
 }
 .dish:hover .dish__select {
   max-width: 59px;
+}
+.dish:hover .dish__select i {
+  transform: rotate(360deg);
 }
 
 .menu-section__title,
