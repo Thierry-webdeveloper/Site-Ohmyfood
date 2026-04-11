@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Description pour SEO -->
+    <meta
+      name="description"
+      content="Ohmyfood - Menu du restaurant Le délice des sens"
+    />
+    <title>Menu - Le délice des sens</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+    <!-- Appel pour les polices du site : Roboto & Shrikhand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Appel des fichiers pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Appel pour les feuilles de style -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Définition des dégradés SVG réutilisables -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="heart-gradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FF79DA" />
+          <stop offset="100%" stop-color="#9356DC" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- HEADER -->
+    <header>
+      <!-- Logo -->
+      <div class="header__top">
+        <a
+          href="../index.html"
+          class="header__goback"
+          aria-label="Retour à l'accueil"
+        >
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <img
+          src="../assets/images/logo/ohmyfood.png"
+          alt="Logo Ohmyfood"
+          class="header__logo"
+        />
+      </div>
+    </header>
+
+    <main>
+      <!-- BANNIÈRE -->
+      <div class="restaurant-banner">
+        <img
+          src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+          alt="Restaurant Le délice des sens"
+          class="restaurant-banner__image"
+        />
+      </div>
+
+      <!-- CARTE RESTAURANT -->
+      <div class="restaurant-content">
+        <div class="restaurant-content__inner">
+          <!-- Titre + Coeur -->
+          <div class="restaurant-title">
+            <h1 class="restaurant-title__name">Le délice des sens</h1>
+            <span class="card__heart">
+              <!-- SVG 1 : contour seul — dans le flux, donne la taille au parent -->
+              <span class="card__heart-icon">
+                <svg
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke="#101010"
+                    stroke-width="1"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                  />
+                </svg>
+              </span>
+
+              <!-- SVG 2 : gradient seul — en absolute, invisible au repos -->
+              <span class="card__heart-icon card__heart-icon--filled">
+                <svg
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="url(#heart-gradient)"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+
+          <!-- Section menu des entrées -->
+          <section class="menu-section">
+            <h2 class="menu-section__title" data-index="1">Entrées</h2>
+            <ul class="menu-section__list">
+              <li class="dish" data-index="2">
+                <div class="dish__text">
+                  <p class="dish__name">Tartare de thon</p>
+                  <p class="dish__description">Assaisonné au yuzu</p>
+                </div>
+                <p class="dish__price">25€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="dish" data-index="3">
+                <div class="dish__text">
+                  <p class="dish__name">Bouchée de homard croustillant</p>
+                  <p class="dish__description">
+                    Et sa farandole de petits légumes
+                  </p>
+                </div>
+                <p class="dish__price">35€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="dish" data-index="4">
+                <div class="dish__text">
+                  <p class="dish__name">Velouté de cèpes</p>
+                  <p class="dish__description">Aux truffes</p>
+                </div>
+                <p class="dish__price">20€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section menu des plats -->
+          <section class="menu-section">
+            <h2 class="menu-section__title" data-index="5">Plats</h2>
+            <ul class="menu-section__list">
+              <li class="dish" data-index="6">
+                <div class="dish__text">
+                  <p class="dish__name">Poulet rôti aux herbes de Provence</p>
+                  <p class="dish__description">Et sa crème de truffe</p>
+                </div>
+                <p class="dish__price">40€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="dish" data-index="7">
+                <div class="dish__text">
+                  <p class="dish__name">Langouste rôtie</p>
+                  <p class="dish__description">Et ses légumes de saison</p>
+                </div>
+                <p class="dish__price">35€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="dish" data-index="8">
+                <div class="dish__text">
+                  <p class="dish__name">Côte de bœuf Angus</p>
+                  <p class="dish__description">Et sa purée de panais</p>
+                </div>
+                <p class="dish__price">44€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section menu des desserts -->
+          <section class="menu-section">
+            <h2 class="menu-section__title" data-index="9">Desserts</h2>
+            <ul class="menu-section__list">
+              <li class="dish" data-index="10">
+                <div class="dish__text">
+                  <p class="dish__name">Farandole de desserts</p>
+                  <p class="dish__description">Du chef</p>
+                </div>
+                <p class="dish__price">18€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="dish" data-index="11">
+                <div class="dish__text">
+                  <p class="dish__name">Crème brulée</p>
+                  <p class="dish__description">Revisitée</p>
+                </div>
+                <p class="dish__price">22€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="dish" data-index="12">
+                <div class="dish__text">
+                  <p class="dish__name">Tiramisu</p>
+                  <p class="dish__description">À la noisette</p>
+                </div>
+                <p class="dish__price">23€</p>
+                <div class="dish__select">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <a href="#" class="btn btn--restaurant">Commander</a>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p class="footer__logo">ohmyfood</p>
+        <nav class="footer__nav" aria-label="Liens utiles">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link footer__link--bold">
+                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                <span>Proposer un restaurant</span>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a href="#" class="footer__link footer__link--bold">
+                <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+                <span>Devenir partenaire</span>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a href="#" class="footer__link footer__link--regular">
+                Mentions légales
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a
+                href="mailto:contact@ohmyfood.com"
+                class="footer__link footer__link--regular"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>
