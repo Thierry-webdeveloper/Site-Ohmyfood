@@ -401,6 +401,20 @@ button {
   margin: 40px 0;
 }
 
+@keyframes badge-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -624,6 +638,10 @@ button {
   font-weight: 500;
   font-size: 14px;
   padding: 8px 16px;
+  transform-origin: center center;
+}
+.card__badge:hover {
+  animation: badge-ring 300ms ease-in-out 3;
 }
 .card__body {
   display: flex;
