@@ -21,7 +21,7 @@ $font-text:   'Roboto', sans-serif;   // texte courant
 
 // Breakpoints (valeurs standard les plus répandues)
 $breakpoint-tablet:   768px;
-$breakpoint-desktop:  1440px;    //1024px;   // 1317px
+$breakpoint-desktop:  1440px;    // Figma
 
 // Espacements
 $spacing-4:   4px;
@@ -45,7 +45,6 @@ $shadow-logo:      0 2px  4px 0 rgba(0, 0, 0, 0.15);  // barre logo
 $shadow-location:  0 4px  4px 0 rgba(0, 0, 0, 0.25);  // barre localisation
 
 // Survol bouton
-$color-primary-light:   #c084e8;  // #9356DC éclairci pour le hover
 $shadow-btn-hover:      0 4px 15px 0 rgba(0, 0, 0, 0.35);   // ombre renforcée au survol
 
 // Durée des transitions au survol

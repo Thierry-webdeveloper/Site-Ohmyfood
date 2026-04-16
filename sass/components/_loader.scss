@@ -8,20 +8,20 @@
 // la maintenance : modifier une valeur suffit.
 // ------------------------------------------------------------
 
-// Durées d'apparition initiale
+// Durées d'exécution
 $loader-logo-dur:        700ms;
 $loader-bars-dur:        500ms;
 $loader-tagline-dur:     500ms;
 
-// Délais d'apparition initiale
+// Délais de déclenchement
 $loader-logo-delay:      80ms;
 $loader-bars-delay:      300ms;
 $loader-tagline-delay:   450ms;
 
-// Durée totale du loader avant disparition
-$loader-total-dur:       2500ms;
-// Durée de la transition de disparition
+// Durée de la disparition du loader
 $loader-hide-dur:        400ms;
+// Délai de visibilité du loader
+$loader-display-delay:   2500ms;
 
 // Barres — pulse
 $loader-bar-pulse-dur:   850ms;
@@ -92,8 +92,8 @@ $loader-blink-opacity:   0.15;
   justify-content: center;
   gap: $spacing-32;
 
-  // Disparition automatique après $loader-total-dur
-  animation: loader-hide $loader-hide-dur ease-in $loader-total-dur forwards;
+  // Disparition automatique après $loader-display-delay
+  animation: loader-hide $loader-hide-dur ease-in $loader-display-delay forwards;
 
   // ----------------------------------------------------------
   // Logo SVG

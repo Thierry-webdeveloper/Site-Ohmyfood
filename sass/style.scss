@@ -122,8 +122,8 @@
   width: 218px;
   height: 50px;
   border-radius: $border-radius-btn;
+  // opacity: 1 est la valeur par défaut de tout élément CSS appliquée implicitement par le navigateur
   box-shadow: $shadow-btn;
-
   // Animation survol
   transition: opacity 500ms ease, box-shadow 500ms ease;
 
@@ -270,9 +270,9 @@
     font-weight: 500;
     font-size: 14px;
     padding: $spacing-8 $spacing-16;
+    // Animation au survol
     transform-origin: center center;
 
-    // L'animation au survol
     &:hover {
       animation: badge-ring 300ms ease-in-out 3;
     }
@@ -316,11 +316,10 @@
       display: block;       // corrige le comportement inline du span
       width: 100%;
       height: 100%;
-      opacity: 1;           // visible par défaut
-      transition: opacity $transition-hover-dur ease;
-
       svg { width: 100%; height: 100%; }
       path { stroke: #101010; stroke-width: 1; fill: none; }
+      opacity: 1;           // visible par défaut
+      transition: opacity $transition-hover-dur ease;
     }
 
     // L'icône pleine (SVG 2)
@@ -330,16 +329,12 @@
       left: 0;
       width: 100%;
       height: 100%;
+      path { fill: url(#heart-gradient); stroke: none; }
       opacity: 0;         // non visible par défaut
       transition: opacity $transition-hover-dur ease;
-
-      path { 
-        fill: url(#heart-gradient);
-        stroke: none; 
-      }
     }
 
-    // L'animation au survol du PARENT
+    // Animation au survol du PARENT
     &:hover {
       .card__heart-icon {
         opacity: 0;       // Le contour disparaît
